@@ -23,8 +23,8 @@ services:
     environment:
       #- DOCKER_HOST=tcp://docker:2376
       - DOCKER_HOST=unix:///var/run/docker.sock
-      - DOCKER_CERT_PATH=/certs/client
-      - DOCKER_TLS_VERIFY=1
+      #- DOCKER_CERT_PATH=/certs/client
+      #- DOCKER_TLS_VERIFY=1
       - JAVA_OPTS=-Dhudson.model.DirectoryBrowserSupport.CSP="default-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
     volumes:
       - jenkins-data:/var/jenkins_home
